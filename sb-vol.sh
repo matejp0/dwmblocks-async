@@ -9,15 +9,27 @@ case "$BLOCK_BUTTON" in
 esac
 
 volume=$(wpctl get-volume @DEFAULT_AUDIO_SINK@)
+level=$(echo "$volume" | cut -d' ' -f2)
+levelPercent=$(printf "%.0f" $(echo "$level * 100" | bc -l))
+
 if [[ $volume == *"MUTED"* ]]; then
-  symbol="^c#777788^ "
+  color="^c#777788^"
+elif [[ $levelPercent -gt 100 ]]; then
+  color="^c#ff6969^"
 else
-  symbol="^c#ff8869^ "
+  color="^c#ff8869^"
 fi
 
-level=$(echo "$volume" | cut -d' ' -f2)
+
+if [[ $levelPercent -gt 50 ]]; then
+  symbol=" "
+else
+  symbol=""
+fi
+
+
 
 # muted=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep -c MUTED && echo '^c#ff5555^ ^d^' || echo ''", 0, 5) \
 #    X("", "wpctl get-volume @DEFAULT_AUDIO_SINK@ | cut -d' ' -f2", 0, 5) \
 
-echo "$symbol $level^d^"
+echo "$color$symbol $levelPercent^d^"
