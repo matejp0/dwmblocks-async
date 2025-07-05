@@ -20,10 +20,10 @@
 
 #define BLOCKS(X)             \
     X("", "setxkbmap -query | grep layout | awk '{ print $2 }'", 0, 11) \ 
-    X("", ".local/dwm/dwmblocks-async/sb-wifi.sh", 5, 5) \ 
-    X("", ".local/dwm/dwmblocks-async/sb-vol.sh", 0, 6) \ 
-    X("", ".local/dwm/dwmblocks-async/sb-bri.sh", 0, 7) \ 
-    X("", ".local/dwm/dwmblocks-async/sb-bat.sh", 10, 8) \ 
+    X("", "~/.local/dwm/dwmblocks-async/sb-wifi.sh", 5, 5) \ 
+    X("", "~/.local/dwm/dwmblocks-async/sb-vol.sh", 0, 6) \ 
+    X("", "~/.local/dwm/dwmblocks-async/sb-bri.sh", 0, 7) \ 
+    X("", "~/.local/dwm/dwmblocks-async/sb-bat.sh", 10, 8) \ 
     X(" ", "date '+%-d/%-m'", 60, 9) \
     X("󰥔 ", "date '+%H:%M:%S'", 1, 10)
 
