@@ -1,15 +1,15 @@
 #!/bin/dash
 
 case "$BLOCK_BUTTON" in
-  1) connman-gtk & ;;
+  1) alacritty -e nmtui & ;;
 esac
 
-active=$(/usr/bin/connmanctl services | grep "*AR\|*AO" | grep "wifi")
+name=$(/usr/bin/nmcli d | grep -m 1 "wifi" | awk '{print $4}')
 
-if [ -n "$active" ]; then
-  sname="$(echo $active | grep -oE '[^ ]+$')"
-  name="$(/usr/bin/connmanctl services $sname | grep 'Name = ' | grep -oE '[^=]+$' | awk '{$1=$1};1')"
-  strength="$(/usr/bin/connmanctl services $sname | grep 'Strength = ' | grep -oE '[^=]+$' | awk '{$1=$1};1')"
+if [ "$name" = "--" ]; then
+  echo "󰤮"
+else
+  strength="$(/usr/bin/nmcli dev wifi list | grep -i '^\*' | awk '{print $8}')"
   if [ "$strength" -le 30 ]; then
     symbol="󰤟"
   elif [ "$strength" -le 60 ]; then
@@ -20,6 +20,4 @@ if [ -n "$active" ]; then
     symbol="󰤨"
   fi
   echo "^c#69bbff^$symbol $name^d^"
-else
-  echo "󰤮"
 fi
