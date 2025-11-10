@@ -4,7 +4,7 @@ case "$BLOCK_BUTTON" in
   1) /usr/bin/arandr & ;;
 esac
 
-level="$(/usr/bin/xbacklight -get)"
+level="$(/usr/bin/brightnessctl get)"
 
 if [ "$level" -le 33 ]; then
   symbol="^c#ffcc69^󰃞"
