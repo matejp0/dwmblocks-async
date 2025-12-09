@@ -1,8 +1,8 @@
 #!/bin/bash
 
 case "$BLOCK_BUTTON" in
-  1) ~/.local/dwm/dwmblocks-async/change-governor.sh;;
-  3) ~/.local/dwm/dwmblocks-async/toggle-conservation-mode.sh;;
+  1) ~/.local/share/dwm/dwmblocks-async/change-governor.sh;;
+  3) ~/.local/share/dwm/dwmblocks-async/toggle-conservation-mode.sh;;
 esac
 
 readonly NAME="BAT1"

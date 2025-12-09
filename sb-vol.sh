@@ -3,7 +3,7 @@
 case "$BLOCK_BUTTON" in
   1) pavucontrol & ;;
   2) /usr/bin/wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ ;;
-  3) ~/.local/dwm/dwmblocks-async/rotate-sinks.sh;;
+  3) ~/.local/share/dwm/dwmblocks-async/rotate-sinks.sh;;
   4) /usr/bin/wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ ;;
   5) /usr/bin/wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- ;;
 esac
