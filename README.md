@@ -11,7 +11,7 @@ This repository includes a small collection of bash scripts that are pretty usef
 This is my configuration
 ![My configuration](preview.png)
 
-To make it work, you have to put this repo inside `~/.local/dwm/` directory.
+To make it work, you have to put this repo inside `~/.local/share/dwm/` directory.
 
 ## Features
 
