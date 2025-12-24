@@ -19,7 +19,7 @@
 // Define blocks for the status feed as X(icon, cmd, interval, signal).
 
 #define BLOCKS(X)             \
-    X("", "setxkbmap -query | grep layout | awk '{ print $2 }'", 0, 11) \ 
+    X("", "~/.local/share/dwm/dwmblocks-async/sb-klay.sh", 0, 11) \ 
     X("", "~/.local/share/dwm/dwmblocks-async/sb-wifi.sh", 5, 5) \ 
     X("", "~/.local/share/dwm/dwmblocks-async/sb-vol.sh", 0, 6) \ 
     X("", "~/.local/share/dwm/dwmblocks-async/sb-bri.sh", 0, 7) \ 
