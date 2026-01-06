@@ -20,7 +20,7 @@
 
 #define BLOCKS(X)             \
     X("", "~/.local/share/dwm/dwmblocks-async/sb-klay.sh", 0, 11) \ 
-    X("", "~/.local/share/dwm/dwmblocks-async/sb-wifi.sh", 5, 5) \ 
+    X("", "~/.local/share/dwm/dwmblocks-async/sb-wifi.sh", 5, 13) \ 
     X("", "~/.local/share/dwm/dwmblocks-async/sb-vol.sh", 0, 6) \ 
     X("", "~/.local/share/dwm/dwmblocks-async/sb-bri.sh", 0, 7) \ 
     X("", "~/.local/share/dwm/dwmblocks-async/sb-bat.sh", 10, 8) \ 
